@@ -2,5 +2,5 @@
 from .detr import build
 
 
-def build_model(args):
+def build_slottedmodel(args):
     return build(args)
