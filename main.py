@@ -14,7 +14,8 @@ import datasets
 import util.misc as utils
 from datasets import build_dataset, get_coco_api_from_dataset
 from engine import evaluate, train_one_epoch
-from models import build_model
+import models.build_model
+import slottedmodels.build_model
 
 
 def get_args_parser():
@@ -99,6 +100,8 @@ def get_args_parser():
     parser.add_argument('--world_size', default=1, type=int,
                         help='number of distributed processes')
     parser.add_argument('--dist_url', default='env://', help='url used to set up distributed training')
+
+    parser.add_argument('--slotted', action='store_true')
     return parser
 
 
@@ -118,7 +121,7 @@ def main(args):
     np.random.seed(seed)
     random.seed(seed)
 
-    model, criterion, postprocessors = build_model(args)
+    model, criterion, postprocessors = models.build_model(args) if not args.slotted else slottedmodels.build_model(args)
     model.to(device)
 
     model_without_ddp = model
