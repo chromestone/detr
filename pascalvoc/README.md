@@ -2,6 +2,20 @@
 
 This folder contains code for preparing the dataset.
 
+The first step is to convert the data by extracting the features using the SSD's VGG backbone:
+
+https://github.com/amdegroot/ssd.pytorch
+
+The code will be in the SSD_feature_extract.ipynb .
+
+The dependencies are:
+
+* pytorch
+* jupyterlab
+* opencv
+
+The second step is to convert the annotations to COCO format.
+
 (Requires tqdm.)
 
 ```git clone https://github.com/yukkyo/voc2coco.git```
