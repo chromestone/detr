@@ -1,0 +1,9 @@
+name: ssd-env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - pytorch
+  - jupyterlab
+  - opencv
+  - torchvision

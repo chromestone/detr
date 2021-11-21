@@ -8,11 +8,7 @@ https://github.com/amdegroot/ssd.pytorch
 
 The code will be in the SSD_feature_extract.ipynb .
 
-The dependencies are:
-
-* pytorch
-* jupyterlab
-* opencv
+The conda YML file has been included for dependencies.
 
 The second step is to convert the annotations to COCO format.
 
