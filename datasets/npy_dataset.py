@@ -35,10 +35,10 @@ class CocoDetection(torch.utils.data.Dataset):
         path = self.coco.loadImgs(id)[0]["file_name"]
         return np.load(os.path.join(self.root, path[:-3] + 'npy'))
 
-    def _load_target(self, id: int) -> List[Any]:
+    def _load_target(self, id: int):
         return self.coco.loadAnns(self.coco.getAnnIds(id))
 
-    def __getitem__(self, index: int) -> Tuple[Any, Any]:
+    def __getitem__(self, index: int):
         id = self.ids[index]
         image = self._load_image(id)
         target = self._load_target(id)
