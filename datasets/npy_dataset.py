@@ -55,8 +55,8 @@ def build(image_set, args):
     assert root.exists(), f'provided COCO path {root} does not exist'
 
     PATHS = {
-        "train": (root / "JPEGImages", root / "annotations" / f'train2012.json'),
-        "val": (root / "JPEGImages", root / "annotations" / f'val2012.json'),
+        "train": (root / "train2012", root / "annotations" / f'train2012.json'),
+        "val": (root / "val2012", root / "annotations" / f'val2012.json'),
     }
 
     img_folder, ann_file = PATHS[image_set]
