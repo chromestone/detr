@@ -4,6 +4,7 @@ import torchvision
 
 from .coco import build as build_coco
 from .pascalvoc import build as build_voc
+from .npy_dataset import build as build_npy
 
 
 def get_coco_api_from_dataset(dataset):
@@ -25,4 +26,6 @@ def build_dataset(image_set, args):
         return build_coco_panoptic(image_set, args)
     if args.dataset_file == 'pascalvoc':
         return build_voc(image_set, args)
+    if args.dataset_file == 'numpy':
+        return build_npy(image_set, args)
     raise ValueError(f'dataset {args.dataset_file} not supported')
