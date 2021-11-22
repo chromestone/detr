@@ -80,6 +80,8 @@ class Backbone(nn.Module):
 
     def __init__(self):
 
+        super().__init__()
+
         self.very_unique_name = nn.Identity()
 
     def forward(self, something):
