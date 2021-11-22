@@ -31,7 +31,7 @@ class CocoDetection(torch.utils.data.Dataset):
         self.coco = COCO(annFile)
         self.ids = list(sorted(self.coco.imgs.keys()))
 
-    def _load_image(self, id: int) -> Image.Image:
+    def _load_image(self, id: int):
         path = self.coco.loadImgs(id)[0]["file_name"]
         return np.load(os.path.join(self.root, path[:-3] + 'npy'))
 
