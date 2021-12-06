@@ -1,0 +1,12 @@
+Training was done on a single A100 GPU.
+
+## regular training time
+Nov 22 04:43 checkpoint0009.pth
+Nov 22 13:26 checkpoint0079.pth
+---resume---
+Dec  4 21:27 checkpoint0089.pth
+Dec  4 22:41 checkpoint0099.pth
+
+## slotted training time
+Dec  5 00:26 checkpoint0039.pth
+Dec  5 10:23 checkpoint0099.pth
