@@ -40,6 +40,12 @@ The slotted model takes up more memory and so it was really only feasible to use
 
 ```python main.py --coco_path /mnt/data/VOCdevkit/VOC2012 --epochs 100 --output_dir /home/dzhang21/detr/slotted_output_dir --dataset_file pascalvoc --batch_size 2 --num_workers 12 --slotted > the_output.txt```
 
+## Results
+
+Our final weights for both models after training for 100 eopchs can be found here:
+
+https://drive.google.com/drive/folders/1qbbBySWydyEf6vkNQGS8naloaNoYg0Yn?usp=sharing
+
 ## Using Pre-Extracted Features
 
 An optional step is to convert the data by extracting the features using the SSD's VGG backbone:
